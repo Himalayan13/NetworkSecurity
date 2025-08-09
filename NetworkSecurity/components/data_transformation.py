@@ -75,6 +75,9 @@ class DataTransformation:
             preprocessor_obj = preprocessor.fit(input_feature_train_df)
             transformed_input_train_feature = preprocessor_obj.transform(input_feature_train_df)
             transformed_input_test_feature = preprocessor_obj.transform(input_feature_test_df)
+            
+            # This combines the transformed input features and the target column side by side into a single NumPy array,
+            # so each row contains both the features and the corresponding target value.
 
             train_arr = np.c_[transformed_input_train_feature, np.array(target_feature_train_df)]
             test_arr = np.c_[transformed_input_test_feature, np.array(target_feature_test_df)]
