@@ -1,0 +1,31 @@
+[ 2025-08-13 22:14:11,985 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2025-08-13 22:14:11,989 ] 107 dagshub - INFO - Accessing as HimnishA
+[ 2025-08-13 22:14:12,494 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/HimnishA/NetworkSecurity "HTTP/1.1 200 OK"
+[ 2025-08-13 22:14:12,858 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2025-08-13 22:14:12,862 ] 107 dagshub - INFO - Initialized MLflow to track repo "HimnishA/NetworkSecurity"
+[ 2025-08-13 22:14:12,863 ] 107 dagshub - INFO - Repository HimnishA/NetworkSecurity initialized!
+[ 2025-08-13 22:14:23,286 ] 35 root - INFO - Start data ingestion
+[ 2025-08-13 22:14:24,678 ] 69 root - INFO - Performed train test split on dataframe
+[ 2025-08-13 22:14:24,678 ] 72 root - INFO - Exited train test split method of data ingestion class
+[ 2025-08-13 22:14:24,678 ] 81 root - INFO - Exporting train test file path
+[ 2025-08-13 22:14:24,728 ] 91 root - INFO - Export of train test file path complete
+[ 2025-08-13 22:14:24,728 ] 38 root - INFO - Data Ingestion Completed! and Artifact: DataIngestionArtifact(trained_file_path='Artifacts/08_13_2025_22_14_09/data_ingestion/ingested/train.csv', test_file_path='Artifacts/08_13_2025_22_14_09/data_ingestion/ingested/test.csv')
+[ 2025-08-13 22:14:24,728 ] 47 root - INFO - Start Data Validation
+[ 2025-08-13 22:14:24,747 ] 34 root - INFO - No of columns in Schema: 2
+[ 2025-08-13 22:14:24,747 ] 35 root - INFO - Dataframe has columns:31
+[ 2025-08-13 22:14:24,747 ] 34 root - INFO - No of columns in Schema: 2
+[ 2025-08-13 22:14:24,747 ] 35 root - INFO - Dataframe has columns:31
+[ 2025-08-13 22:14:24,895 ] 50 root - INFO - Data Validation Completed! and Artifact: DataValidationArtifact(validation_status=None, valid_train_file_path='Artifacts/08_13_2025_22_14_09/data_ingestion/ingested/train.csv', valid_test_file_path='Artifacts/08_13_2025_22_14_09/data_ingestion/ingested/test.csv', invalid_train_file_path=None, invalid_test_file_path=None, drift_report_file_path='Artifacts/08_13_2025_22_14_09/data_validation/drift_report/report.yaml')
+[ 2025-08-13 22:14:24,895 ] 57 root - INFO - Entered initiate_data_transformation
+[ 2025-08-13 22:14:24,895 ] 59 root - INFO - Starting data transformation
+[ 2025-08-13 22:14:24,910 ] 39 root - INFO - Entered get_data_transformer_object
+[ 2025-08-13 22:14:24,910 ] 42 root - INFO - Initialied KNNImputer with the folowing params {'missing_values': nan, 'n_neighbors': 3, 'weights': 'uniform'}
+[ 2025-08-13 22:14:24,915 ] 44 root - INFO - Entered the save_object method of MainUtils class
+[ 2025-08-13 22:14:24,916 ] 48 root - INFO - Exited the save_object method of MainUtils class
+[ 2025-08-13 22:14:24,916 ] 44 root - INFO - Entered the save_object method of MainUtils class
+[ 2025-08-13 22:14:24,918 ] 48 root - INFO - Exited the save_object method of MainUtils class
+[ 2025-08-13 22:17:48,563 ] 44 root - INFO - Entered the save_object method of MainUtils class
+[ 2025-08-13 22:17:48,574 ] 48 root - INFO - Exited the save_object method of MainUtils class
+[ 2025-08-13 22:17:48,574 ] 44 root - INFO - Entered the save_object method of MainUtils class
+[ 2025-08-13 22:17:48,581 ] 48 root - INFO - Exited the save_object method of MainUtils class
+[ 2025-08-13 22:17:48,581 ] 137 root - INFO - Model trainer artifacts: ModelTrainerArtifact(trained_model_file_path='Artifacts/08_13_2025_22_14_09/model_trainer/trained_model/model.pkl', train_metric_artifact=ClassificationMetricArtifact(f1_score=0.9907416827754604, precision_score=0.9862264533117278, recall_score=0.9952984464431726), test_metric_artifact=ClassificationMetricArtifact(f1_score=0.9749216300940439, precision_score=0.9665889665889665, recall_score=0.983399209486166))
